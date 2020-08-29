@@ -55,7 +55,7 @@ export const popularEatries = [
         id: '1b',
         opened: true,
         liked: true,
-        name: 'HoneySuckle Pub & Resturant',
+        name: 'HoneySuckle Pub & Restaurant',
         location : 'Ring Road, Accra',
         rating : 5,
         image : require('../../assets/images/meat.jpg')
@@ -67,7 +67,7 @@ export const popularEatries = [
         liked: true,
         name: 'Eddys Pizza - Dansoman',
         location : 'Dansoman High Street, Dansoman',
-        rating : 1.7,
+        rating : 3.7,
         image : require('../../assets/images/pizza.jpg') 
     },
 
