@@ -2,6 +2,7 @@ import React from 'react';
 import {View, ImageBackground, StyleSheet} from 'react-native';
 import {P, H5} from './typography';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Rating from './rating';
 
 export default function PopularPlaceItem({
   name,
@@ -9,7 +10,7 @@ export default function PopularPlaceItem({
   location,
   liked,
   image,
-  opened,
+  opened
 }) {
   return (
     <View style={styles.container}>
@@ -31,6 +32,7 @@ export default function PopularPlaceItem({
           {name}
         </H5>
         <P style={styles.location}>{location}</P>
+        <Rating rate={rating}/>
       </View>
     </View>
   );

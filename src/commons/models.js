@@ -67,7 +67,7 @@ export const popularEatries = [
         liked: true,
         name: 'Eddys Pizza - Dansoman',
         location : 'Dansoman High Street, Dansoman',
-        rating : 5,
+        rating : 1.7,
         image : require('../../assets/images/pizza.jpg') 
     },
 
