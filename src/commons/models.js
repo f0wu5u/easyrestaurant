@@ -47,7 +47,7 @@ export const popularEatries = [
         liked: false,
         name: 'Osu Papaye',
         location : 'Osu Oxford Street',
-        rating : 4.5,
+        rating : 0,
         image : require('../../assets/images/asparagus.jpg')
     },
 
@@ -57,7 +57,7 @@ export const popularEatries = [
         liked: true,
         name: 'HoneySuckle Pub & Restaurant',
         location : 'Ring Road, Accra',
-        rating : 5,
+        rating : 5.0,
         image : require('../../assets/images/meat.jpg')
     },
 

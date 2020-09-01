@@ -1,12 +1,12 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-export function H1({children}) {
-  return <Text children={children} style={styles.h1} />;
+export function H1({children, style, ...others}) {
+  return <Text {...others} children={children} style={styles.h1} />;
 }
 
-export function H2({children, style}) {
-  return <Text children={children} style={{...styles.h2, ...style}} />;
+export function H2({children, style, ...others}) {
+  return <Text  {...others} children={children} style={{...styles.h2, ...style}} />;
 }
 
 export function H3({children, style, ...others}) {

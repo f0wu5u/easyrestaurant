@@ -19,20 +19,20 @@ export default function PopularPlaceItem({
         style={styles.imageBackground}
         resizeMode="cover">
         <View style={styles.topActions}>
-          <View style={styles.placeAccess}>
-            <P style={styles.placeAccessText}>
-              {opened ? 'Opended' : 'Closed'}
-            </P>
+          <View style={styles.placeAccessContainer}>
+            <P style={styles.placeAccessText}>{opened ? 'Opened' : 'Closed'}</P>
           </View>
-          <Icon name="heart" size={20} color="#fff" />
+          <Icon
+            name={liked ? 'heart' : 'heart-outline'}
+            size={20}
+            color="#ffffff"
+          />
         </View>
       </ImageBackground>
       <View style={styles.placeInfoContainer}>
-        <H5 numberOfLines={2} style={styles.placeName}>
-          {name}
-        </H5>
-        <P style={styles.location}>{location}</P>
-        <Rating rate={rating}/>
+        <H5 style={styles.placeName}>{name}</H5>
+        <P style={styles.placeLocation}>{location}</P>
+        <Rating rating={rating}/>
       </View>
     </View>
   );
@@ -41,11 +41,11 @@ export default function PopularPlaceItem({
 const styles = StyleSheet.create({
   container: {
     width: 220,
-    shadowColor: "#fff",
-    borderColor:'#eee',
-    borderWidth:1,
-    borderRadius: 10,
+    borderColor: '#eeeeee',
+    borderWidth: 1,
+    backgroundColor: '#ffffff',
     overflow: 'hidden',
+    borderRadius: 10,
   },
 
   imageBackground: {
@@ -55,16 +55,16 @@ const styles = StyleSheet.create({
 
   topActions: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
+    alignItems: 'center',
     padding: 10,
   },
 
-  placeAccess: {
+  placeAccessContainer: {
     paddingVertical: 3,
     paddingHorizontal: 5,
+    backgroundColor: 'rgba(0,0,0,0.4)',
     borderRadius: 5,
-    backgroundColor: 'rgba(0,0,0,0.6)',
   },
 
   placeAccessText: {
@@ -75,16 +75,14 @@ const styles = StyleSheet.create({
 
   placeInfoContainer: {
     padding: 8,
-    backgroundColor:'#fff',
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
+    backgroundColor: '#ffffff',
   },
 
   placeName: {
     fontSize: 14,
   },
 
-  location: {
+  placeLocation: {
     fontSize: 12,
     color: '#8f8f8f',
   },

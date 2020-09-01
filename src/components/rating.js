@@ -3,47 +3,46 @@ import {View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {P} from './typography';
 
-export default function Rating({rate, maxStars}) {
+export default function Rating({rating, maxRate}) {
   const [stars, setStars] = useState([]);
-
   useEffect(() => {
     const mStars = [];
-    for (let startNum = 1; startNum <= maxStars; startNum++) {
+    for (let startNum = 1; startNum <= maxRate; startNum++) {
       const star = (
         <Icon
           key={startNum}
           name="star"
+          color={startNum <= rating ? 'gold' : '#d9d9d9'}
           size={10}
-          color={startNum <= rate ? 'gold' : '#d9d9d9'}
         />
       );
       mStars.push(star);
     }
+
     setStars(mStars);
-  }, [rate, maxStars]);
+  }, [rating, maxRate]);
 
   return (
     <View style={styles.container}>
       {stars}
-      <P style={styles.rateText}>({rate})</P>
+      <P style={styles.ratingText}>({rating})</P>
     </View>
   );
 }
 
-Rating.defaultProps = {
-  maxStars: 5,
-};
-
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
     marginTop: 6,
+    flexDirection: 'row',
     alignItems: 'center',
   },
 
-  rateText: {
+  ratingText: {
     fontSize: 12,
     marginStart: 5,
-    color: '#8f8f8f',
   },
 });
+
+Rating.defaultProps = {
+  maxRate: 5,
+};
