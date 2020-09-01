@@ -4,8 +4,12 @@ import {
   StatusBar,
   ScrollView,
   StyleSheet,
-  Text,
 } from 'react-native';
+import TopNavigation from './src/components/topNavigation';
+import SearchBar from './src/components/searchBar';
+import CategoryList from './src/components/categoryList';
+import PopularEatriesList from './src/components/popularEatriesList';
+import TrendingList from './src/components/trendingList';
 
 const App = () => {
   return (
@@ -15,7 +19,16 @@ const App = () => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentInsetAdjustmentBehavior="automatic">
-          <Text>Welcome To Easy Resturant Starter</Text>
+            
+            <TopNavigation/>
+
+            <SearchBar/>
+
+            <CategoryList/>
+
+            <PopularEatriesList/>
+
+            <TrendingList/>
         </ScrollView>
       </SafeAreaView>
     </>

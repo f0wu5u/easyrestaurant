@@ -47,7 +47,7 @@ export const popularEatries = [
         liked: false,
         name: 'Osu Papaye',
         location : 'Osu Oxford Street',
-        rating : 4.5,
+        rating : 0,
         image : require('../../assets/images/asparagus.jpg')
     },
 
@@ -57,7 +57,7 @@ export const popularEatries = [
         liked: true,
         name: 'HoneySuckle Pub & Resturant',
         location : 'Ring Road, Accra',
-        rating : 5,
+        rating : 5.0,
         image : require('../../assets/images/meat.jpg')
     },
 
@@ -67,7 +67,7 @@ export const popularEatries = [
         liked: true,
         name: 'Eddys Pizza - Dansoman',
         location : 'Dansoman High Street, Dansoman',
-        rating : 5,
+        rating : 2.4,
         image : require('../../assets/images/pizza.jpg') 
     },
 
