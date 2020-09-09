@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, ImageBackground, StyleSheet} from 'react-native';
+import {View, ImageBackground, StyleSheet, Pressable} from 'react-native';
 import {P, H5} from './typography';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Rating from './rating';
+import { useNavigation } from '@react-navigation/native';
 
 export default function PopularPlaceItem({
   name,
@@ -12,8 +13,11 @@ export default function PopularPlaceItem({
   image,
   opened,
 }) {
+
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.container}>
+    <Pressable onPress={()=>navigation.navigate('placeDetail')} style={styles.container}>
       <ImageBackground
         source={image}
         style={styles.imageBackground}
@@ -34,7 +38,7 @@ export default function PopularPlaceItem({
         <P style={styles.placeLocation}>{location}</P>
         <Rating rating={rating}/>
       </View>
-    </View>
+    </Pressable>
   );
 }
 
