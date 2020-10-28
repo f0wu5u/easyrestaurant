@@ -11,8 +11,7 @@ export default function HorizontalList({keyExtractor, data, renderItem, style}) 
         data={data}
         renderItem={renderItem}
         ItemSeparatorComponent={ItemSeparator}
-        ListHeaderComponent={HeaderFooter}
-        ListFooterComponent={HeaderFooter}
+        contentContainerStyle={styles.contentContainer}
       />
     </View>
   );
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
     width: 12,
   },
 
-  headerFooter: {
-      width : 24
+  contentContainer: {
+      paddingHorizontal : 24
   }
 });
