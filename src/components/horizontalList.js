@@ -6,9 +6,11 @@ export default function HorizontalList({keyExtractor, data, renderItem, style}) 
     <View style={{...styles.container,...style}}>
       <FlatList
         horizontal
+        listKey="horizontal-scroll"
         showsHorizontalScrollIndicator={false}
         keyExtractor={keyExtractor}
         data={data}
+
         renderItem={renderItem}
         ItemSeparatorComponent={ItemSeparator}
         contentContainerStyle={styles.contentContainer}
@@ -17,8 +19,7 @@ export default function HorizontalList({keyExtractor, data, renderItem, style}) 
   );
 }
 
-const ItemSeparator = () => <View style={styles.itemSeparator} />;
-const HeaderFooter = () => <View style={styles.headerFooter} />
+export const ItemSeparator = () => <View style={styles.itemSeparator} />;
 
 
 const styles = StyleSheet.create({

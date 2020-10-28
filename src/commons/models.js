@@ -82,6 +82,55 @@ export const popularEatries = [
   },
 ];
 
+export const menu = [
+  {
+    title: 'Garlic Meat Chops',
+    calories: 'KCAL 200',
+    description: 'Some cool stuff here and there, only meat and garlic',
+    price: 'GHS 30.00',
+    image: meat,
+  },
+
+  {
+    title: 'Chicken Pizza (Non Sweet/ Dry)',
+    calories: 'KCAL 2100',
+    description: 'Some cool stuff here and there, only meat and garlic',
+    price: 'GHS 50.00',
+    image: pizza,
+  },
+
+  {
+    title: 'Vege Meat Combo - EasyEat',
+    calories: 'KCAL 2',
+    description: 'Cool stuff here and there, only meat and garlic',
+    price: 'GHS 60.00',
+    image: asparagus,
+  },
+];
+
+export const dishes = [
+  {
+    id: '1a',
+    name: 'Meat Chops',
+    description: 'Meat chops now',
+    image: meat,
+  },
+
+  {
+    id: '1b',
+    name: 'Saucy Kebab',
+    description: 'Meat kebab now',
+    image: kebab,
+  },
+
+  {
+    id: '1c',
+    name: 'Vege Meat Combo',
+    description: 'The Vege Arena',
+    image: asparagus,
+  },
+];
+
 export const trendingBrands = [
   {
     id: '1a',
@@ -126,5 +175,4 @@ export const trendingBrands = [
   },
 ];
 
-
-export const images = [kebab,meat,asparagus,pizza];
+export const images = [kebab, pizza, meat, asparagus];

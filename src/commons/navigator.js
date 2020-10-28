@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 export default function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="placeDetail">
+      <Stack.Navigator headerMode="none" initialRouteName="home">
         <Stack.Screen name="home" getComponent={() => Home} />
         <Stack.Screen name="placeDetail" getComponent={() => PlaceDetail} />
       </Stack.Navigator>

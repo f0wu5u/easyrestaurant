@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react';
 import {Dimensions, FlatList} from 'react-native';
+import HorizontalList from './horizontalList';
 import PlaceMenu from './placeMenu';
 import PlaceDirectionTab from './tabs/placeDirectionTab';
 import PlaceMenuTab from './tabs/placeMenuTab';
@@ -8,9 +9,9 @@ import PlaceReviewTab from './tabs/placeReviewTab';
 const {width} = Dimensions.get('window');
 const components = [
   // tab content goes here
-  <PlaceMenuTab />,
-  <PlaceDirectionTab />,
-  <PlaceReviewTab />,
+  <PlaceMenuTab width={width} />,
+  <PlaceDirectionTab width={width} />,
+  <PlaceReviewTab width={width} />,
 ];
 
 // tab component render
@@ -68,6 +69,7 @@ export default function PlacePaging() {
           index,
         })}
       />
+    
     </>
   );
 }
